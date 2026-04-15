@@ -1,10 +1,10 @@
 [Unit]
-Description=cleans up old files
-Wants=file-cleanup.timer
+Description=logs the storage capacity used for filesystem
+Wants=file-check.timer
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /opt/file-check/purge_scripts/high-level-purge.sh
+ExecStart=/bin/bash /opt/file-check/file-check.sh
 
 [Install]
 WantedBy=multi-user.target

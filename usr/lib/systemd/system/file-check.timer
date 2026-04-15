@@ -1,11 +1,11 @@
 [Unit]
-Description=Timer for: file-cleanup.service
-Requires=file-cleanup.service
+Description=Timer for: file-check.service
+Requires=file-check.service
 
 [Timer]
-Unit=file-cleanup.service
+Unit=file-check.service
 # Run the timer, every hour, on the hour
-OnCalendar=*:0/15
+OnCalendar=*-*-* *:16:00
 
 [Install]
 WantedBy=timers.target
