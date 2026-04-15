@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for: file-cleanup.service
+Requires=file-cleanup.service
+
+[Timer]
+Unit=file-cleanup.service
+# Run the timer, every hour, on the hour
+OnCalendar=*:0/15
+
+[Install]
+WantedBy=timers.target

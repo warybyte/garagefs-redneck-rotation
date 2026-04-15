@@ -1,0 +1,10 @@
+[Unit]
+Description=cleans up old files
+Wants=file-cleanup.timer
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /opt/file-check/purge_scripts/high-level-purge.sh
+
+[Install]
+WantedBy=multi-user.target
